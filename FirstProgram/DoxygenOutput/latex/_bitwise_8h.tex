@@ -1,0 +1,106 @@
+\hypertarget{_bitwise_8h}{\section{Last\+Badge/\+Developing\+Computer\+Programming/\+Bitwise.h File Reference}
+\label{_bitwise_8h}\index{Last\+Badge/\+Developing\+Computer\+Programming/\+Bitwise.\+h@{Last\+Badge/\+Developing\+Computer\+Programming/\+Bitwise.\+h}}
+}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_bitwise_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_bitwise_8h_a1069f717b1478dfc4f451a08a1690884}{Bitwise} ()
+\begin{DoxyCompactList}\small\item\em Calculator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_bitwise_8h_a1069f717b1478dfc4f451a08a1690884}{\index{Bitwise.\+h@{Bitwise.\+h}!Bitwise@{Bitwise}}
+\index{Bitwise@{Bitwise}!Bitwise.\+h@{Bitwise.\+h}}
+\subsubsection[{Bitwise}]{\setlength{\rightskip}{0pt plus 5cm}void Bitwise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_bitwise_8h_a1069f717b1478dfc4f451a08a1690884}
+
+
+Calculator. 
+
+
+
+
+
+\begin{DoxyAuthor}{Author}
+Nishant Jain
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9 December 2014
+\end{DoxyDate}
+A source file with function \hyperlink{_bitwise_8c_a1069f717b1478dfc4f451a08a1690884}{Bitwise()}
+
+
+
+
+
+Bitwise
+
+\begin{DoxyAuthor}{Author}
+Nishant Jain
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 27, 2014
+\end{DoxyDate}
+This function uses and displays bit operations on variables
+
+Required Files/\+Databases\+: None
+
+Non System Routines Called\+: None
+
+Return Value\+: None
+
+O\+S Specific Assumptions\+: None
+
+Local Variables\+: A integer used for calculating sum B integer used in for loop C integer used to calulate sum 
+
+Definition at line 45 of file Bitwise.\+c.
+
+
+
+Referenced by Extra().
+
+
+\begin{DoxyCode}
+46 \{
+47   \textcolor{keywordtype}{int} A, B, C;
+48   printf(\textcolor{stringliteral}{"Type two integers to learn about bitwise operations. A= "});
+49   scanf(\textcolor{stringliteral}{" %d"}, &A);
+50   printf(\textcolor{stringliteral}{"\(\backslash\)n B= "});
+51   scanf(\textcolor{stringliteral}{" %d"}, &B);
+52   C= A & B;
+53   printf(\textcolor{stringliteral}{"AND: A & B = %d \(\backslash\)n"}, C);
+54   C= A | B;
+55   printf(\textcolor{stringliteral}{"OR: A | B = %d \(\backslash\)n"}, C);
+56   C= A ^ B;
+57   printf(\textcolor{stringliteral}{"XOR: A ^ B = %d \(\backslash\)n"}, C);
+58   C= ~A;
+59   printf(\textcolor{stringliteral}{"COMPLEMENT: ~A = %d \(\backslash\)n"}, C);
+60   C= A <<2;
+61   printf(\textcolor{stringliteral}{"LESFT SHIFT: A <<2 = %d \(\backslash\)n"}, C);
+62   C= A >>2;
+63   printf(\textcolor{stringliteral}{"RIGHT SHIFT: A >>2 = %d \(\backslash\)n"}, C);
+64 
+65 \}\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{_bitwise_8h_a1069f717b1478dfc4f451a08a1690884_icgraph}
+\end{center}
+\end{figure}
+
+

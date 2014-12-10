@@ -1,0 +1,116 @@
+Script started on Sun Dec  7 16:00:34 2014
+[?1034hbash-3.2$ exit./CompoundDataTypes[C[C[C[C[C[C[C[C[C[Cexit[K./CompoundDataTypes
+This program will calculate percentage score of the user. 
+
+What's your full name? Nishant Jain
+
+What's your Roll Number? 20
+
+What's your gender (M/F)? M
+
+What's you Cell Number? 384821
+Enter subject 1 marks out of 100: 90
+Enter subject 2 marks out of 100: 90
+Enter subject 3 marks out of 100: 90
+Enter subject 4 marks out of 100: 80
+Enter subject 5 marks out of 100: 100
+
+
+Name= Nishant Jain
+ 
+Gender= M
+Roll Number= 20 
+Cell Number= 384821
+Subject 1 marks: 90.000000
+Subject 2 marks: 90.000000
+Subject 3 marks: 90.000000
+Subject 4 marks: 80.000000
+Subject 5 marks: 100.000000
+
+Is the information correct (Y/N)? N
+
+What would you like to change?
+1)Name 
+2)Roll Number 
+3)Gender 
+4)Cell Number
+5)Marks 
+1
+
+What's your full name? Mukul Jain
+
+
+Name= Mukul Jain
+ 
+Gender= M
+Roll Number= 20 
+Cell Number= 384821
+Subject 1 marks: 90.000000
+Subject 2 marks: 90.000000
+Subject 3 marks: 90.000000
+Subject 4 marks: 80.000000
+Subject 5 marks: 100.000000
+
+Is the information correct (Y/N)? n
+
+What would you like to change?
+1)Name 
+2)Roll Number 
+3)Gender 
+4)Cell Number
+5)Marks 
+3 4
+
+What's you Cell Number? 7654449023
+
+
+Name= Mukul Jain
+ 
+Gender= M
+Roll Number= 20 
+Cell Number= 7654449023
+Subject 1 marks: 90.000000
+Subject 2 marks: 90.000000
+Subject 3 marks: 90.000000
+Subject 4 marks: 80.000000
+Subject 5 marks: 100.000000
+
+Is the information correct (Y/N)? n
+
+What would you like to change?
+1)Name 
+2)Roll Number 
+3)Gender 
+4)Cell Number
+5)Marks 
+5
+
+Which subject would you like to change? 4
+Mukul Jain
+, enter subject 4 marks out of 100: 90
+
+
+Name= Mukul Jain
+ 
+Gender= M
+Roll Number= 20 
+Cell Number= 7654449023
+Subject 1 marks: 90.000000
+Subject 2 marks: 90.000000
+Subject 3 marks: 90.000000
+Subject 4 marks: 90.000000
+Subject 5 marks: 100.000000
+
+Is the information correct (Y/N)? y
+
+Name: Mukul Jain
+ MJ 
+Roll Number: 20 
+Gender: M 
+Cell Number: 7654449023 
+Percentage= 92.000000 
+
+bash-3.2$ exit
+exit
+
+Script done on Sun Dec  7 16:01:50 2014

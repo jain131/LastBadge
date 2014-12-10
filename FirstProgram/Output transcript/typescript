@@ -1,0 +1,85 @@
+Script started on Sat Nov 22 14:22:22 2014
+[?1034hbash-3.2$ ./ExpressionCalc
+Welcome to Calculator. 
+Please select an Arithmetic operation from the following: 
+1)Addition 	 2)Subtraction 	 3)Multiplication 
+4)Division 	 5)Power 	 6)Extra Features 
+5
+Do you want to use the previous result as one of the operands (Y/N)? 
+n
+Enter any values for operand(s): 
+Operand 1: 2
+Operand 2: 3
+
+The Result= 8.000000 
+
+Continue y/n?  y
+Please select an Arithmetic operation from the following: 
+1)Addition 	 2)Subtraction 	 3)Multiplication 
+4)Division 	 5)Power 	 6)Extra Features 
+3
+Do you want to use the previous result as one of the operands (Y/N)? 
+y
+Enter any values for operand(s): 
+Operand 1 is the previous result: 8.000000 
+Operand 2: 0.5
+
+The Result= 4.000000 
+
+Continue y/n?  y
+Please select an Arithmetic operation from the following: 
+1)Addition 	 2)Subtraction 	 3)Multiplication 
+4)Division 	 5)Power 	 6)Extra Features 
+6
+
+Select from the following options: 
+1)Fibonacci Series 
+2)Bitwise Operations 
+3)Square root 
+3
+Enter the number you want the square root of: 36
+
+ Square root of 36.000000: 6.000000
+Continue y/n?  y
+Please select an Arithmetic operation from the following: 
+1)Addition 	 2)Subtraction 	 3)Multiplication 
+4)Division 	 5)Power 	 6)Extra Features 
+6
+
+Select from the following options: 
+1)Fibonacci Series 
+2)Bitwise Operations 
+3)Square root 
+2
+Type two integers to learn about bitwise operations. A= 10
+
+ B= 30
+AND: A & B = 10 
+OR: A | B = 30 
+XOR: A ^ B = 20 
+COMPLEMENT: ~A = -11 
+LESFT SHIFT: A <<2 = 40 
+RIGHT SHIFT: A >>2 = 2 
+
+Continue y/n?  y
+Please select an Arithmetic operation from the following: 
+1)Addition 	 2)Subtraction 	 3)Multiplication 
+4)Division 	 5)Power 	 6)Extra Features 
+6
+
+Select from the following options: 
+1)Fibonacci Series 
+2)Bitwise Operations 
+3)Square root 
+1
+
+Enter the range of Fibonacci series: 
+ 6
+FIBONACCI SERIES: 0 1 1 2 3 5
+Sum of Fibonacci series= 11 
+
+Continue y/n?  n
+bash-3.2$ exit
+exit
+
+Script done on Sat Nov 22 14:24:09 2014

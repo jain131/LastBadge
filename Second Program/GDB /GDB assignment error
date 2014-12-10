@@ -1,0 +1,138 @@
+Script started on Sat Dec  6 15:43:25 2014
+[?1034hbash-3.2$ gdb CompoundDataTypes.c
+[?1034hGNU gdb (GDB) 7.8
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-apple-darwin13.3.0".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+"/Users/nishantjain/Desktop/LastBadge/CompoundDataTypes/CompoundDataTypes.c": not in executable format: File format not recognized
+(gdb) file CompoundDataTypes
+Reading symbols from CompoundDataTypes...Reading symbols from /Users/nishantjain/Desktop/LastBadge/CompoundDataTypes/CompoundDataTypes.dSYM/Contents/Resources/DWARF/CompoundDataTypes...done.
+done.
+(gdb) list
+59	* check char To see if user wants to continue
+60	* ch int User's choice of operation
+61	* cont char To ask if user wants to continue or not
+62	* length int Length of string user.Name 
+63	*
+64	***********************************************************************/
+65	int main()
+66	{
+67	  /*!Flowchart: 
+68	  * \image html compounddatatypes.jpg
+(gdb) b 130
+Breakpoint 1 at 0x100000a50: file CompoundDataTypes.c, line 130.
+(gdb) r
+Starting program: /Users/nishantjain/Desktop/LastBadge/CompoundDataTypes/CompoundDataTypes 
+warning: Could not open OSO archive file "/BinaryCache/corecrypto/corecrypto-233.1.2~26/Symbols/BuiltProducts/libcorecrypto_static.a"
+warning: `/BinaryCache/coreTLS/coreTLS-35.1.2~1/Objects/coretls.build/coretls.build/Objects-normal/x86_64/system_coretls_vers.o': can't open to read symbols: No such file or directory.
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_ciphersuites.a"
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_handshake.a"
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_record.a"
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_stream_parser.a"
+This program will calculate percentage score of the user. 
+
+warning: this program uses gets(), which is unsafe.
+What's your full name? Nishant Jain
+
+What's your Roll Number? 50  20
+
+What's your gender (M/F)? M
+
+What's you Cell Number? 4972386963
+Nishant Jain, enter subject 1 marks out of 100: 90
+Nishant Jain, enter subject 2 marks out of 100: 90
+Nishant Jain, enter subject 3 marks out of 100: 80
+Nishant Jain, enter subject 4 marks out of 100: 100
+Nishant Jain, enter subject 5 marks out of 100: 90
+
+
+Name= Nishant Jain 
+Gender= M
+Roll Number= 20 
+Cell Number= 4972386963
+Subject 1 marks: 90.000000
+Subject 2 marks: 90.000000
+Subject 3 marks: 80.000000
+Subject 4 marks: 100.000000
+Subject 5 marks: 90.000000
+
+Is the information correct (Y/N)? y
+
+Breakpoint 1, main () at CompoundDataTypes.c:130
+130	  for(int j=0;j<5;j++)
+(gdb) display marks[K[K[K[K[KPer
+1: Per = 0
+(gdb) n
+132	    Per+=user.marks[j];
+1: Per = 0
+(gdb) n
+130	  for(int j=0;j<5;j++)
+1: Per = 90
+(gdb) n
+132	    Per+=user.marks[j];
+1: Per = 90
+(gdb) n
+130	  for(int j=0;j<5;j++)
+1: Per = 180
+(gdb) n
+132	    Per+=user.marks[j];
+1: Per = 180
+(gdb) n
+130	  for(int j=0;j<5;j++)
+1: Per = 260
+(gdb) n
+132	    Per+=user.marks[j];
+1: Per = 260
+(gdb) n
+130	  for(int j=0;j<5;j++)
+1: Per = 360
+(gdb) n
+132	    Per+=user.marks[j];
+1: Per = 360
+(gdb) n
+130	  for(int j=0;j<5;j++)
+1: Per = 450
+(gdb) n
+135	  Per=Per/5;
+1: Per = 450
+(gdb) n
+136	  Per=user.percentage;
+1: Per = 90
+(gdb) n
+139	  printf("\nName: %s \nRoll Number: %d \nGender: %c \nCell Number: %ld \n", 
+1: Per = 4.59163468e-41
+(gdb) n
+
+Name: Nishant Jain NJ 
+Roll Number: 20 
+Gender: M 
+Cell Number: 4972386963 
+141	  printf("Percentage= %f \n\n", user.percentage);
+1: Per = 4.59163468e-41
+(gdb) n
+Percentage= 0.000000 
+
+143	  return (0);
+1: Per = 4.59163468e-41
+(gdb) #found the problem
+(gdb) #aggi[K[K[K[Kwrong assignment doen,[K[K[Kne, core[Krect [K: user.percentage [K=Per;
+(gdb) exit[K[K[K[Kq
+A debugging session is active.
+
+	Inferior 1 [process 6033] will be killed.
+
+Quit anyway? (y or n) y
+bash-3.2$ w[Kexit
+exit
+
+Script done on Sat Dec  6 15:48:00 2014

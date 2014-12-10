@@ -1,0 +1,67 @@
+Script started on Thu Dec  4 03:29:47 2014
+[?1034hbash-3.2$ gdb CompoundDataTypes.c
+[?1034hGNU gdb (GDB) 7.8
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-apple-darwin13.3.0".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+"/Users/nishantjain/Desktop/LastBadge/CompoundDataTypes/CompoundDataTypes.c": not in executable format: File format not recognized
+(gdb) file E[KCompoundDataTypes
+Reading symbols from CompoundDataTypes...Reading symbols from /Users/nishantjain/Desktop/LastBadge/CompoundDataTypes/CompoundDataTypes.dSYM/Contents/Resources/DWARF/CompoundDataTypes...done.
+done.
+(gdb) break36
+Undefined command: "break36".  Try "help".
+(gdb) break 36
+Breakpoint 1 at 0x100000b89: file CompoundDataTypes.c, line 36.
+(gdb) break 39
+Breakpoint 2 at 0x100000baf: file CompoundDataTypes.c, line 39.
+(gdb) break 55
+Breakpoint 3 at 0x100000c91: file CompoundDataTypes.c, line 55.
+(gdb) break 63
+Breakpoint 4 at 0x100000d58: file CompoundDataTypes.c, line 63.
+(gdb) r
+Starting program: /Users/nishantjain/Desktop/LastBadge/CompoundDataTypes/CompoundDataTypes 
+warning: Could not open OSO archive file "/BinaryCache/corecrypto/corecrypto-233.1.2~26/Symbols/BuiltProducts/libcorecrypto_static.a"
+warning: `/BinaryCache/coreTLS/coreTLS-35.1.2~1/Objects/coretls.build/coretls.build/Objects-normal/x86_64/system_coretls_vers.o': can't open to read symbols: No such file or directory.
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_ciphersuites.a"
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_handshake.a"
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_record.a"
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_stream_parser.a"
+This program will calculate percentage score of the user. 
+
+Breakpoint 1, main () at CompoundDataTypes.c:36
+36	  scanf(" %s", user.Name);
+(gdb) n
+What's your full name? Nishant Jain
+38	  printf("\nWhat's your Roll Number? ");
+(gdb) n
+
+
+Breakpoint 2, main () at CompoundDataTypes.c:39
+39	  scanf(" %d", &user.Roll);
+(gdb) n
+41	  printf("\nWhat's your gender (M/F)? ");
+(gdb) n
+What's your Roll Number? 
+42	  scanf(" %c", &user.Gender);
+(gdb) n
+44	  printf(" \nWhat's you Cell Number? ");
+(gdb) q\[K
+A debugging session is active.
+
+	Inferior 1 [process 3910] will be killed.
+
+Quit anyway? (y or n) y
+bash-3.2$ exit
+exit
+
+Script done on Thu Dec  4 03:32:38 2014

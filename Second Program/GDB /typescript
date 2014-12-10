@@ -1,0 +1,86 @@
+Script started on Thu Dec  4 02:02:07 2014
+[?1034hbash-3.2$ exitgcc -g CompoundDataTypes.c CompoundDataTypes [C[C[C[C[C[C[C[C[C[Cexit[Kgcc -g CompoundDataTypes.c -o CompoundDataTypes  
+bash-3.2$ gdb CompoundDataTypes.c
+[?1034hGNU gdb (GDB) 7.8
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-apple-darwin13.3.0".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+"/Users/nishantjain/Desktop/CompoundDataTypes/CompoundDataTypes.c": not in executable format: File format not recognized
+(gdb) g[Kfile CompoundDataTypes
+Reading symbols from CompoundDataTypes...Reading symbols from /Users/nishantjain/Desktop/CompoundDataTypes/CompoundDataTypes.dSYM/Contents/Resources/DWARF/CompoundDataTypes...done.
+done.
+(gdb) list
+1	#include <stdio.h>
+2	
+3	struct member
+4	{
+5	  char Name[10];
+6	  float marks[6];
+7	};
+8	
+9	int main()
+10	{
+(gdb) bra[Keak 23
+Breakpoint 1 at 0x100000db9: file CompoundDataTypes.c, line 23.
+(gdb) r
+Starting program: /Users/nishantjain/Desktop/CompoundDataTypes/CompoundDataTypes 
+warning: Could not open OSO archive file "/BinaryCache/corecrypto/corecrypto-233.1.2~26/Symbols/BuiltProducts/libcorecrypto_static.a"
+warning: `/BinaryCache/coreTLS/coreTLS-35.1.2~1/Objects/coretls.build/coretls.build/Objects-normal/x86_64/system_coretls_vers.o': can't open to read symbols: No such file or directory.
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_ciphersuites.a"
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_handshake.a"
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_record.a"
+warning: Could not open OSO archive file "/BinaryCache/coreTLS/coreTLS-35.1.2~1/Symbols/BuiltProducts/libcoretls_stream_parser.a"
+This program will calculate percentage score of the user. 
+What's your first name? Nishant
+
+Breakpoint 1, main () at CompoundDataTypes.c:23
+23	  for(int i=0; i<5; i++)
+(gdb) display i
+1: i = 32767
+(gdb) n
+25	    printf("%s, enter subject %d marks out of 100: ", user.Name, ++i);
+1: i = 0
+(gdb) n
+26	    scanf(" %f", &user.marks[i]);
+1: i = 1
+(gdb) n
+Nishant, enter subject 1 marks out of 100: 90
+23	  for(int i=0; i<5; i++)
+1: i = 1
+(gdb) n
+25	    printf("%s, enter subject %d marks out of 100: ", user.Name, ++i);
+1: i = 2
+(gdb) n
+26	    scanf(" %f", &user.marks[i]);
+1: i = 3
+(gdb) n
+Nishant, enter subject 3 marks out of 100: 80
+23	  for(int i=0; i<5; i++)
+1: i = 3
+(gdb) n
+25	    printf("%s, enter subject %d marks out of 100: ", user.Name, ++i);
+1: i = 4
+(gdb) 3[K#Found the error
+(gdb) #Valueo[K of i is incrementa[King in the printf commo[Kans[Kd
+(gdb) 1
+Undefined command: "1".  Try "help".
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 2118] will be killed.
+
+Quit anyway? (y or n) y
+bash-3.2$ exit
+exit
+
+Script done on Thu Dec  4 02:05:04 2014
