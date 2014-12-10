@@ -11,11 +11,12 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 //Data structure to hold details of a user
 struct member
 {
-  char Name[20];
+  char *Name;
   float marks[6];
   int Roll;
   long int CellNo;
@@ -69,12 +70,17 @@ int main()
   float Per=0;
   int k=0;
   char ch;
-  int length;
+  //Pointer to length of string
+  int *length;
+
+  //! Allocating memory to user name using callpc. 
+  //! Initiallizing it with NULL
+  user->Name = calloc(30, sizeof(char));
   
   printf("This program will calculate percentage score of the user->\n");
 
   printf("\nWhat's your full name? ");
-  fgets(user->Name, sizeof(user->Name), stdin);
+  fgets(user->Name, 30, stdin);
 
   printf("\nWhat's your Roll Number? ");
   scanf(" %d", &user->Roll);
@@ -107,6 +113,10 @@ int main()
     scanf(" %c", &ch);
     if(ch=='N' || ch=='n')
     {
+
+      //!Reallocating more memory to name 
+      user->Name = realloc(user->Name, 40 * sizeof(char));
+
       /*!
       * Passing a pointer to function as parameter
       * Call by reference
@@ -114,17 +124,20 @@ int main()
       change(user);
     }
   }while(ch=='N' || ch=='n');
-  
+
+  //!Allocating memory to length using malloc()
+  length = (int*) malloc(sizeof(int));
+
   //Putting Initials of the name in the user->Name string
-  length=strlen(user->Name);
-  user->Name[length]=' ';
-  user->Name[length+1]=user->Name[0];
+  *length=strlen(user->Name);
+  user->Name[*length]=' ';
+  user->Name[*length+1]=user->Name[0];
   //Finding the second initial
   while( user->Name[k]!=' ' && k<strlen(user->Name))
   {  
     k++;
   }
-  user->Name[length+2]=user->Name[k+1];
+  user->Name[*length+2]=user->Name[k+1];
 
 
   //Calculating percentage
@@ -144,6 +157,10 @@ int main()
     user->Name, user->Roll, user->Gender, user->CellNo);
   printf("Percentage= %f \n\n", user->percentage);
   
+  //!Freeing allocated memory
+  free(user->Name);
+  free(length);
+
   return (0);
 }
 
@@ -195,7 +212,7 @@ void change(struct member* user)
     printf("\nWhat's your full name? ");
     //To get rid of the spaces in the buffer
     getchar();
-    fgets(user->Name, sizeof(user->Name), stdin);
+    fgets(user->Name, 40, stdin);
     break;
 
     case 2:
