@@ -17,10 +17,10 @@
 *
 * \brief Bitwise
 *
-* \author Nishant Jain
+* \author Nishant Jain* \date November 27, 2014
 *
-* \date November 27, 2014
-*
+
+*p-
 * \details This function uses and displays bit operations on variables
 *
 * Required Files/Databases:
