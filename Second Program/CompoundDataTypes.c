@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 //Data structure to hold details of a user
 struct member
@@ -43,18 +44,26 @@ void change(struct member* user);
 * None
 *
 * Return Value:
+*
 * Type Description
+*
 * int return(0)
 *
 * OS Specific Assumptions:
 * None
 *
 * Local Variables:
+*
 * Name Type Description
+*
 * user struct member Data structure stores user's information
+*
 * ch char User's choice of operation
+*
 * k int Used to put initials of user's name in the string
+*
 * length int Length of string storing user's name
+*
 * Per float Percentage of user's marks 
 *
 ***********************************************************************/
@@ -66,7 +75,8 @@ int main()
 
   //Declaring a member object pointer called user
   struct member *user;
-  float Per=0;
+  float *Per;
+  Per = malloc(sizeof(Per));
   int k=0;
   char ch;
   int length;
@@ -82,7 +92,7 @@ int main()
   printf("\nWhat's your gender (M/F)? ");
   scanf(" %c", &user->Gender);
   
-  printf("\nWhat's you Cell Number? ");
+  printf("\nWhat's you Cell Number? (For example: 7654903212) ");
   scanf(" %ld", &user->CellNo);
 
   for(int i=0; i<5 ; i++)
@@ -125,25 +135,27 @@ int main()
     k++;
   }
   user->Name[length+2]=user->Name[k+1];
+  user->Name[length+3]='\0';
 
 
   //Calculating percentage
   for(int j=0;j<5;j++)
-  {  
-    Per+=user->marks[j];
+  { 
+    //!Derefercing value of pointer variable Per  
+    *Per+=user->marks[j];
   }
 
-  Per=Per/5;
-  user->percentage=Per;
+  *Per/=5;
+  //!user->Percentage points to percentage Per now
+  user->percentage = *Per;
   
   //Printing Report Card
-  printf("\nName: %s \nRoll Number: %d \nGender: %c \nCell Number: %ld", 
-    user->Name, user->Roll, user->Gender, user->CellNo);
-  printf("\n %s's percentage= %f \n\n", user->Name, Per);
   printf("\nName: %s \nRoll Number: %d \nGender: %c \nCell Number: %ld \n", 
     user->Name, user->Roll, user->Gender, user->CellNo);
   printf("Percentage= %f \n\n", user->percentage);
   
+  free(Per);
+
   return (0);
 }
 
@@ -170,7 +182,9 @@ int main()
 * None
 *
 * Local Variables:
-* choice char-array Used to take input for user's choice 
+*
+* choice char-array Used to take input for user's choice
+*
 * sub int Subject score to change
 *
 ***********************************************************************/
@@ -209,7 +223,7 @@ void change(struct member* user)
     break;
 
     case 4:
-    printf("\nWhat's you Cell Number? ");
+    printf("\nWhat's you Cell Number? (For example: 7654903212) ");
     scanf(" %ld", &user->CellNo);
     break;
 
