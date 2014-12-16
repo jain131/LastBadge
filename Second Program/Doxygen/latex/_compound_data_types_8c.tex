@@ -1,14 +1,14 @@
-\hypertarget{_compound_data_types_8c}{\section{Last\+Badge/\+Compound\+Data\+Types/\+Compound\+Data\+Types.c File Reference}
-\label{_compound_data_types_8c}\index{Last\+Badge/\+Compound\+Data\+Types/\+Compound\+Data\+Types.\+c@{Last\+Badge/\+Compound\+Data\+Types/\+Compound\+Data\+Types.\+c}}
+\hypertarget{_compound_data_types_8c}{\section{Last\+Badge/\+Second Program/\+Compound\+Data\+Types.c File Reference}
+\label{_compound_data_types_8c}\index{Last\+Badge/\+Second Program/\+Compound\+Data\+Types.\+c@{Last\+Badge/\+Second Program/\+Compound\+Data\+Types.\+c}}
 }
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 {\ttfamily \#include $<$string.\+h$>$}\\*
-Include dependency graph for Compound\+Data\+Types.\+c\+:
-\nopagebreak
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for Compound\+Data\+Types.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=244pt]{_compound_data_types_8c__incl}
+\includegraphics[width=260pt]{_compound_data_types_8c__incl}
 \end{center}
 \end{figure}
 \subsection*{Data Structures}
@@ -51,71 +51,17 @@ Return Value\+: None
 
 O\+S Specific Assumptions\+: None
 
-Local Variables\+: choice char-\/array Used to take input for user's choice sub int Subject score to change 
+Local Variables\+:
 
-Definition at line 180 of file Compound\+Data\+Types.\+c.
+choice char-\/array Used to take input for user's choice
 
+sub int Subject score to change 
 
-
-References member\+::\+Cell\+No, member\+::\+Gender, member\+::marks, member\+::\+Name, and member\+::\+Roll.
-
-
-
-Referenced by main().
+Definition at line 191 of file Compound\+Data\+Types.\+c.
 
 
-\begin{DoxyCode}
-181 \{
-182   \textcolor{keywordtype}{int} choice;
-183   \textcolor{keywordtype}{int} sub;
-184 
-185   printf(\textcolor{stringliteral}{"\(\backslash\)nWhat would you like to change?"});
-186   printf(\textcolor{stringliteral}{"\(\backslash\)n1)Name \(\backslash\)n2)Roll Number \(\backslash\)n3)Gender \(\backslash\)n4)Cell Number"});
-187   printf(\textcolor{stringliteral}{"\(\backslash\)n5)Marks \(\backslash\)n"});
-188   scanf(\textcolor{stringliteral}{" %d"}, &choice);
-189 
-190 
-191   \textcolor{comment}{/*}
-192 \textcolor{comment}{  * Dereferencing}
-193 \textcolor{comment}{  * Changes values in the struct user }
-194 \textcolor{comment}{  */}
-195   \textcolor{keywordflow}{switch} (choice)
-196   \{
-197     \textcolor{keywordflow}{case} 1:
-198     printf(\textcolor{stringliteral}{"\(\backslash\)nWhat's your full name? "});
-199     \textcolor{comment}{//To get rid of the spaces in the buffer}
-200     getchar();
-201     fgets(user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}, \textcolor{keyword}{sizeof}(user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}), stdin);
-202     \textcolor{keywordflow}{break};
-203 
-204     \textcolor{keywordflow}{case} 2:
-205     printf(\textcolor{stringliteral}{"\(\backslash\)nWhat's your Roll Number? "});
-206     scanf(\textcolor{stringliteral}{" %d"}, &user->\hyperlink{structmember_abf08303c7c1c86949317530985b66f65}{Roll});
-207     \textcolor{keywordflow}{break};
-208 
-209     \textcolor{keywordflow}{case} 3:
-210     printf(\textcolor{stringliteral}{"\(\backslash\)nWhat's your gender (M/F)? "});
-211     scanf(\textcolor{stringliteral}{" %c"}, &user->\hyperlink{structmember_afbcfc79081bb5d32e3e787e11b880fda}{Gender});
-212     \textcolor{keywordflow}{break};
-213 
-214     \textcolor{keywordflow}{case} 4:
-215     printf(\textcolor{stringliteral}{"\(\backslash\)nWhat's you Cell Number? "});
-216     scanf(\textcolor{stringliteral}{" %ld"}, &user->\hyperlink{structmember_ab06b37fd487ea9df9d12601461704dc2}{CellNo});
-217     \textcolor{keywordflow}{break};
-218 
-219     \textcolor{keywordflow}{case} 5:
-220     printf(\textcolor{stringliteral}{"\(\backslash\)nWhich subject would you like to change? "});
-221     scanf(\textcolor{stringliteral}{" %d"}, &choice);
-222     printf(\textcolor{stringliteral}{"%s, enter subject %d marks out of 100: "}, user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}, choice);
-223     scanf(\textcolor{stringliteral}{" %f"}, &user->\hyperlink{structmember_ad4c3e5c25307fd49af034db07064803a}{marks}[choice-1]);
-224     \textcolor{keywordflow}{break};
-225   \}
-226 \}
-\end{DoxyCode}
 
-
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -145,103 +91,39 @@ Required Files/\+Databases\+: None
 
 Non System Routines Called\+: None
 
-Return Value\+: Type Description int return(0)
+Return Value\+:
+
+Type Description
+
+int return(0)
 
 O\+S Specific Assumptions\+: None
 
-Local Variables\+: Name Type Description user struct member Data structure stores user's information ch char User's choice of operation k int Used to put initials of user's name in the string length int Length of string storing user's name Per float Percentage of user's marks Flowchart\+: 
+Local Variables\+:
+
+Name Type Description
+
+user struct member Data structure stores user's information
+
+ch char User's choice of operation
+
+k int Used to put initials of user's name in the string
+
+length int Length of string storing user's name
+
+Per float Percentage of user's marks Flowchart\+: 
 
 Passing a pointer to function as parameter Call by reference
 
-Definition at line 67 of file Compound\+Data\+Types.\+c.
+Derefercing value of pointer variable Per
+
+user-\/$>$Percentage points to percentage Per now 
+
+Definition at line 70 of file Compound\+Data\+Types.\+c.
 
 
 
-References member\+::\+Cell\+No, change(), member\+::\+Gender, member\+::marks, member\+::\+Name, member\+::percentage, and member\+::\+Roll.
-
-
-\begin{DoxyCode}
-68 \{
-73   \textcolor{comment}{//Declaring a member object pointer called user}
-74   \textcolor{keyword}{struct }\hyperlink{structmember}{member} *user;
-75   \textcolor{keywordtype}{float} Per=0;
-76   \textcolor{keywordtype}{int} k=0;
-77   \textcolor{keywordtype}{char} ch;
-78   \textcolor{keywordtype}{int} length;
-79   
-80   printf(\textcolor{stringliteral}{"This program will calculate percentage score of the user.\(\backslash\)n"});
-81 
-82   printf(\textcolor{stringliteral}{"\(\backslash\)nWhat's your full name? "});
-83   fgets(user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}, \textcolor{keyword}{sizeof}(user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}), stdin);
-84 
-85   printf(\textcolor{stringliteral}{"\(\backslash\)nWhat's your Roll Number? "});
-86   scanf(\textcolor{stringliteral}{" %d"}, &user->\hyperlink{structmember_abf08303c7c1c86949317530985b66f65}{Roll});
-87   
-88   printf(\textcolor{stringliteral}{"\(\backslash\)nWhat's your gender (M/F)? "});
-89   scanf(\textcolor{stringliteral}{" %c"}, &user->\hyperlink{structmember_afbcfc79081bb5d32e3e787e11b880fda}{Gender});
-90   
-91   printf(\textcolor{stringliteral}{"\(\backslash\)nWhat's you Cell Number? "});
-92   scanf(\textcolor{stringliteral}{" %ld"}, &user->\hyperlink{structmember_ab06b37fd487ea9df9d12601461704dc2}{CellNo});
-93 
-94   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<5 ; i++)
-95   \{
-96     printf(\textcolor{stringliteral}{"Enter subject %d marks out of 100: "}, i+1);
-97     scanf(\textcolor{stringliteral}{" %f"}, &user->\hyperlink{structmember_ad4c3e5c25307fd49af034db07064803a}{marks}[i]);
-98   \}
-99 
-100 
-101   \textcolor{comment}{//Displaying user's information}
-102   \textcolor{keywordflow}{do}
-103   \{
-104     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nName= %s \(\backslash\)nGender= %c"}, user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}, user->\hyperlink{structmember_afbcfc79081bb5d32e3e787e11b880fda}{Gender});
-105     printf(\textcolor{stringliteral}{"\(\backslash\)nRoll Number= %d \(\backslash\)nCell Number= %ld"}, user->\hyperlink{structmember_abf08303c7c1c86949317530985b66f65}{Roll}, user->\hyperlink{structmember_ab06b37fd487ea9df9d12601461704dc2}{CellNo});
-106   
-107     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<5; i++)
-108     \{
-109       printf(\textcolor{stringliteral}{"\(\backslash\)nSubject %d marks: %f"}, i+1, user->\hyperlink{structmember_ad4c3e5c25307fd49af034db07064803a}{marks}[i]);
-110     \}
-111   
-112     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)nIs the information correct (Y/N)? "});
-113     scanf(\textcolor{stringliteral}{" %c"}, &ch);
-114     \textcolor{keywordflow}{if}(ch==\textcolor{charliteral}{'N'} || ch==\textcolor{charliteral}{'n'})
-115     \{
-120       \hyperlink{_compound_data_types_8c_ac824407a071ffa93870f9a28c4d7872a}{change}(user);
-121     \}
-122   \}\textcolor{keywordflow}{while}(ch==\textcolor{charliteral}{'N'} || ch==\textcolor{charliteral}{'n'});
-123   
-124   \textcolor{comment}{//Putting Initials of the name in the user->Name string}
-125   length=strlen(user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name});
-126   user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}[length]=\textcolor{charliteral}{' '};
-127   user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}[length+1]=user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}[0];
-128   \textcolor{comment}{//Finding the second initial}
-129   \textcolor{keywordflow}{while}( user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}[k]!=\textcolor{charliteral}{' '} && k<strlen(user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}))
-130   \{  
-131     k++;
-132   \}
-133   user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}[length+2]=user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}[k+1];
-134 
-135 
-136   \textcolor{comment}{//Calculating percentage}
-137   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<5;j++)
-138   \{  
-139     Per+=user->\hyperlink{structmember_ad4c3e5c25307fd49af034db07064803a}{marks}[j];
-140   \}
-141 
-142   Per=Per/5;
-143   user->\hyperlink{structmember_a34c5b668208550b3c34a2ed0eec615f5}{percentage}=Per;
-144   
-145   \textcolor{comment}{//Printing Report Card}
-146   printf(\textcolor{stringliteral}{"\(\backslash\)nName: %s \(\backslash\)nRoll Number: %d \(\backslash\)nGender: %c \(\backslash\)nCell Number: %ld \(\backslash\)n"}, 
-147     user->\hyperlink{structmember_a2053e4d21d9f2f5158910a2977224749}{Name}, user->\hyperlink{structmember_abf08303c7c1c86949317530985b66f65}{Roll}, user->\hyperlink{structmember_afbcfc79081bb5d32e3e787e11b880fda}{Gender}, user->\hyperlink{structmember_ab06b37fd487ea9df9d12601461704dc2}{CellNo});
-148   printf(\textcolor{stringliteral}{"Percentage= %f \(\backslash\)n\(\backslash\)n"}, user->\hyperlink{structmember_a34c5b668208550b3c34a2ed0eec615f5}{percentage});
-149   
-150   \textcolor{keywordflow}{return} (0);
-151 \}
-\end{DoxyCode}
-
-
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

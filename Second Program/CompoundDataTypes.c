@@ -44,18 +44,26 @@ void change(struct member* user);
 * None
 *
 * Return Value:
+*
 * Type Description
+*
 * int return(0)
 *
 * OS Specific Assumptions:
 * None
 *
 * Local Variables:
+*
 * Name Type Description
+*
 * user struct member Data structure stores user's information
+*
 * ch char User's choice of operation
+*
 * k int Used to put initials of user's name in the string
+*
 * length int Length of string storing user's name
+*
 * Per float Percentage of user's marks 
 *
 ***********************************************************************/
@@ -174,7 +182,9 @@ int main()
 * None
 *
 * Local Variables:
-* choice char-array Used to take input for user's choice 
+*
+* choice char-array Used to take input for user's choice
+*
 * sub int Subject score to change
 *
 ***********************************************************************/
