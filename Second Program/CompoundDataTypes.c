@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 //Data structure to hold details of a user
 struct member
@@ -66,7 +67,8 @@ int main()
 
   //Declaring a member object pointer called user
   struct member *user;
-  float Per=0;
+  float *Per;
+  Per = malloc(sizeof(Per));
   int k=0;
   char ch;
   int length;
@@ -125,25 +127,27 @@ int main()
     k++;
   }
   user->Name[length+2]=user->Name[k+1];
+  user->Name[length+3]='\0';
 
 
   //Calculating percentage
   for(int j=0;j<5;j++)
-  {  
-    Per+=user->marks[j];
+  { 
+    //!Derefercing value of pointer variable Per  
+    *Per+=user->marks[j];
   }
 
-  Per=Per/5;
-  user->percentage=Per;
+  *Per/=5;
+  //!user->Percentage points to percentage Per now
+  user->percentage = *Per;
   
   //Printing Report Card
-  printf("\nName: %s \nRoll Number: %d \nGender: %c \nCell Number: %ld", 
-    user->Name, user->Roll, user->Gender, user->CellNo);
-  printf("\n %s's percentage= %f \n\n", user->Name, Per);
   printf("\nName: %s \nRoll Number: %d \nGender: %c \nCell Number: %ld \n", 
     user->Name, user->Roll, user->Gender, user->CellNo);
   printf("Percentage= %f \n\n", user->percentage);
   
+  free(Per);
+
   return (0);
 }
 
