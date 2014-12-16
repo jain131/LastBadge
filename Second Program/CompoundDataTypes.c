@@ -88,7 +88,7 @@ int main()
   printf("\nWhat's your gender (M/F)? ");
   scanf(" %c", &user->Gender);
   
-  printf("\nWhat's you Cell Number? ");
+  printf("\nWhat's you Cell Number? (For example: 7654905434) ");
   scanf(" %ld", &user->CellNo);
 
   for(int i=0; i<5 ; i++)
@@ -226,7 +226,7 @@ void change(struct member* user)
     break;
 
     case 4:
-    printf("\nWhat's you Cell Number? ");
+    printf("\nWhat's you Cell Number? (For example: 7654905434) ");
     scanf(" %ld", &user->CellNo);
     break;
 
